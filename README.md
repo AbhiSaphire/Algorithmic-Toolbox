@@ -51,8 +51,8 @@ I encourage you to try and solve each problem yourself first and only then look 
 * []()
 
 ## Contributions
-Any type of legit contribution will be appreciated. Contributions may include - 
-[-] Documentation
-[-] Improved algorithm implementation
-[-] Code cleaning
-[-] Code modularisation
+Any type of legit contribution will be appreciated. Contributions may include :
+* Documentation
+* Improved algorithm implementation
+* Code cleaning
+* Code modularisation
