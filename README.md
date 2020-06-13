@@ -55,4 +55,4 @@ Any type of legit contribution will be appreciated. Contributions may include :
 * Documentation
 * Improved algorithm implementation
 * Code cleaning
-* Code modularisation
+* Code modularization
