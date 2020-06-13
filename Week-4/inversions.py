@@ -1,31 +1,36 @@
-def get_number_of_inversions(a, left, right):
-    number_of_inversions = 0
-    if right - left <= 1:
-        return number_of_inversions
-    avg = (left + right) // 2
-    number_of_inversions += get_number_of_inversions(a, left, avg)
-    number_of_inversions += get_number_of_inversions(a, avg, right)
-    
-    L, R = a[left: avg], a[avg: right+1]
-    i, j, k = 0, 0, left
-    n1, n2 = avg - left, right - avg
-    while i < n1 and j < n2:
-        if L[i] <= R[i]:
-            a[k] = L[i]
+def merge(left, right):
+    i, j, inversion_counter = 0, 0, 0
+    final = list()
+    while i < len(left) and j< len(right):
+        if left[i] <= right[j]:
+            final.append(left[i])
             i += 1
         else:
-            a[k] = R[j]
-            j, number_of_inversions = j+1, number_of_inversions+1
-        k += 1
-    while i < n1:
-        a[k] = L[i]
-        i, k = i+1, k+1
-    while j < n2:
-        a[k] = R[j]
-        j, k = j+1, k+1
-    return number_of_inversions
+            final.append(right[j])
+            inversion_counter += len(left) - i
+            j += 1
 
-if __name__ == '__main__':
-    n = int(input())
-    a = [int(x) for x in input().split()][:n]
-    print(get_number_of_inversions(a, 0, len(a)))
+    final += left[i:]
+    final += right[j:]
+        
+    return final, inversion_counter
+
+def mergesort(arr):
+    global tot_count
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr)//2
+
+    left = mergesort(arr[:mid])
+    right = mergesort(arr[mid:])
+
+    sorted_arr, temp = merge(left, right)
+    tot_count += temp
+
+    return sorted_arr
+
+tot_count = 0
+n = int(input())
+seq = [int(i) for i in input().split()]
+mergesort(seq)
+print(tot_count)
