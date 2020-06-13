@@ -34,6 +34,7 @@ I encourage you to try and solve each problem yourself first and only then look 
 * [inversion.py](/Week-4/inversions.py)
 * [majority_element.py](/Week-4/majority_element.py)
 * [points_and_segments.py](/Week-4/points_and_segments.py)
+* [closest.py](/Week-4/closest.py)
 
 ### Week 5 Dynamic Programming -1 [PDF](/Week-5/week5.pdf)
 * []()
