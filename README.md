@@ -44,9 +44,9 @@ I encourage you to try and solve each problem yourself first and only then look 
 * [lcs3.py](/Week-5/lcs3.py)
 
 ### Week 6 Dynamic Programming -2 [PDF](/Week-6/week6.pdf)
-* []()
-* []()
-* []()
+* [knapsack.py](/Week-6/knapsack.py)
+* [partition3.py](/Week-6/partition3.py)
+* [placing_parentheses.py](/Week-6/placing_parentheses.py)
 
 ## Contributions
 Any type of legit contribution will be appreciated. Contributions may include :
@@ -54,3 +54,5 @@ Any type of legit contribution will be appreciated. Contributions may include :
 * Improved algorithm implementation
 * Code cleaning
 * Code modularization
+
+## Certification [PDF](AlgorithmicToolbox.pdf)
